@@ -92,7 +92,7 @@ The `setup` function takes two arguments, both of the same type aliased as `User
 
 This class definition comes from the docs for `vim.api.nvim_set_hl` (see `h: nvim_set_hl()`).
 
->![NOTE]
+>[!NOTE]
 >
 > The `default` field is excluded since anything user-defined could override plugin-level options.
 
