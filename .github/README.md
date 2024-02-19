@@ -8,13 +8,13 @@ affect Markdown highlighting were changed.
 
 This caused Markdown files to get no syntax highlighting with Noctis.
 
-Viewing a markdown file with noctis.nvim as is:
+Viewing a markdown file with noctis.nvim as is (Using noctis_uva):
 
-![](some img here)
+![No highlighting here](./no_hl.png)
 
 After making the change that inspired the fork:
 
-![](other img)
+![We got highlighting](./yes_hl.png)
 
 ## Setup
 
@@ -46,4 +46,8 @@ colorscheme setter before the Neovim sets the colorscheme.
 },
 ```
 
-I only use lazy.nvim, so BYOPM if you use something else. Feel free to share setups for other plugin managers!
+> I use lazy.nvim for plugin management. Feel free to contribute configs for others!
+
+Let's breakdown what happens in the above:
+
+1. 
