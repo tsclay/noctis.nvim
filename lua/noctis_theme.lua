@@ -1,19 +1,11 @@
 local highlight = vim.api.nvim_set_hl
 
 ---@class NoctisColorConfig
----@field hl_groups table
----@field override table
----@field setup function
----@field __compile_configs function
----@field from_palette function
 local M = {
   hl_groups = {},
   override = {},
 }
 
----@param palette function
----@param user_config_obj table
----@return table
 function M.__compile_configs(palette, user_config_obj)
   local merged = {}
 
@@ -32,16 +24,11 @@ function M.__compile_configs(palette, user_config_obj)
   return merged
 end
 
----Setup func
----@param hl_groups table|nil
----@param override table|nil
 function M.setup(hl_groups, override)
   M.hl_groups = hl_groups or {}
   M.override = override or {}
 end
 
----@param palette table
----@param override table|nil
 function M.from_palette(palette, override)
   local highlight_groups = {
     Fg                         = { fg = palette.fg,         bg = palette.none },

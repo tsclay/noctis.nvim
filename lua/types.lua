@@ -1,0 +1,48 @@
+---@class (exact) ColorPalette
+---@field bg0 string --for Text; should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field bg1 string --for CursorLine/Sign; Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field bg2 string --for Pmenu; Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field bg3 string --for StatusLine; Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field bg4 string --for Tabline/Winbar; Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field bg_red string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field bg_green string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field bg_blue string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field fg string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field red string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field orange string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field yellow string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field green string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field cyan string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field blue string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field purple string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field grey string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field light_grey string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field light_yellow string --Should resemble a color in hexadecimal format (i.e. "#DDB988")
+---@field none "NONE"
+
+---@class (exact) HighlightDefinition
+---@field fg? string --color name or "#RRGGBB", see note.
+---@field bg? string --color name or "#RRGGBB", see note.
+---@field sp? string --color name or "#RRGGBB"
+---@field blend? integer -- between 0-100
+---@field bold? boolean
+---@field standout? boolean
+---@field underline? boolean
+---@field undercurl? boolean
+---@field underdouble? boolean
+---@field underdotted? boolean
+---@field underdashed? boolean
+---@field strikethrough? boolean
+---@field italic? boolean
+---@field reverse? boolean
+---@field nocombine? boolean
+---@field link? string --name of another highlight group to link to, see |:hi-link|.
+
+---@alias UserColorConfig table<string,HighlightDefinition>
+
+---@class NoctisColorConfig
+---@field hl_groups UserColorConfig
+---@field override UserColorConfig
+---@field setup (fun(hl_groups: UserColorConfig, override: UserColorConfig)) --Placeholder for better docs
+---@field __compile_configs (fun(palette: ColorPalette, user_config_obj: UserColorConfig): table)
+---@field from_palette (fun(palette: ColorPalette, override: UserColorConfig))
